@@ -10,14 +10,9 @@ RUN apt update && apt upgrade -y \
         build-essential git locales sudo libatk-bridge2.0-0 \
         libgtk-3-dev packagekit-gtk3-module libcanberra-gtk-module \
     && locale-gen ja_JP.UTF-8 \
-    && sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list' \
-    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \
-    && apt update \
-    && apt install -y google-chrome-stable \
     && apt clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-# https://blog.ikappio.com/try-creating-electron-gui-app-in-devcontainer-of-vscode/
 ENV LANG ja_JP.UTF-8
 ENV LC_CTYPE ja_JP.UTF-8
 RUN localedef -f UTF-8 -i ja_JP ja_JP.utf8
@@ -31,3 +26,7 @@ RUN echo "root:root" | chpasswd \
 USER ${USERNAME}
 
 RUN npm install electron -g
+
+# Run "echo $DISPLAY" on the host PC and set the displayed string
+ENV DISPNO=:1
+RUN echo "export DISPLAY=${DISPNO}" >> ${HOME}/.bashrc
