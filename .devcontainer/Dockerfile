@@ -23,8 +23,6 @@ ENV LANG ja_JP.UTF-8
 ENV LC_CTYPE ja_JP.UTF-8
 RUN localedef -f UTF-8 -i ja_JP ja_JP.utf8
 ENV QT_X11_NO_MITSHM=1
-# ENV DISPLAY=:0
-ENV DISPLAY=host.docker.internal${DISPNO}
 
 ENV USERNAME=node
 RUN echo "root:root" | chpasswd \
@@ -32,3 +30,5 @@ RUN echo "root:root" | chpasswd \
     && echo "%${USERNAME}    ALL=(ALL)   NOPASSWD:    ALL" >> /etc/sudoers.d/${USERNAME} \
     && chmod 0440 /etc/sudoers.d/${USERNAME}
 USER ${USERNAME}
+
+RUN npm install electron -g
