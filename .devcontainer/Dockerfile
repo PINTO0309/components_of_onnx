@@ -1,5 +1,4 @@
 ARG VARIANT=16-bullseye
-ARG DISPNO=1
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
 ENV DEBIAN_FRONTEND=noninteractive
