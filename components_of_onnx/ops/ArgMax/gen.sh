@@ -8,7 +8,7 @@ sog4onnx \
 --op_type ${OP} \
 --opset ${OPSET} \
 --op_name ${LOWEROP}${OPSET} \
---input_variables ${LOWEROP}${OPSET}_input1 float32 [1] \
+--input_variables ${LOWEROP}${OPSET}_input float32 [1] \
 --output_variables ${LOWEROP}${OPSET}_output int64 [1] \
 --attributes axis int64 0 \
 --attributes keepdims int64 1 \
@@ -20,7 +20,7 @@ sog4onnx \
 --op_type ${OP} \
 --opset ${OPSET} \
 --op_name ${LOWEROP}${OPSET} \
---input_variables ${LOWEROP}${OPSET}_input1 float32 [1] \
+--input_variables ${LOWEROP}${OPSET}_input float32 [1] \
 --output_variables ${LOWEROP}${OPSET}_output int64 [1] \
 --attributes axis int64 0 \
 --attributes keepdims int64 1 \
@@ -32,7 +32,7 @@ sog4onnx \
 --op_type ${OP} \
 --opset ${OPSET} \
 --op_name ${LOWEROP}${OPSET} \
---input_variables ${LOWEROP}${OPSET}_input1 float32 [1] \
+--input_variables ${LOWEROP}${OPSET}_input float32 [1] \
 --output_variables ${LOWEROP}${OPSET}_output int64 [1] \
 --attributes axis int64 0 \
 --attributes keepdims int64 1 \
@@ -45,7 +45,7 @@ sog4onnx \
 --op_type ${OP} \
 --opset ${OPSET} \
 --op_name ${LOWEROP}${OPSET} \
---input_variables ${LOWEROP}${OPSET}_input1 float32 [1] \
+--input_variables ${LOWEROP}${OPSET}_input float32 [1] \
 --output_variables ${LOWEROP}${OPSET}_output int64 [1] \
 --attributes axis int64 0 \
 --attributes keepdims int64 1 \
