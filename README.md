@@ -19,6 +19,8 @@ https://github.com/onnx/onnx/blob/fb1f72159f4030ce45503279e6f6b8a7fb103e0f/docs/
 
 # Progress
 
+**<details><summary>Progress List</summary><div>**
+
 |**No.**|**Operator**|**Fin**|
 |:-|:-|:-:|
 |1|Abs|:heavy_check_mark:|
@@ -192,6 +194,8 @@ https://github.com/onnx/onnx/blob/fb1f72159f4030ce45503279e6f6b8a7fb103e0f/docs/
 |169|SequenceMap||
 |170|Softmax||
 |171|SoftmaxCrossEntropyLoss||
+
+</div></details>
 
 # Reference
 1. https://stackoverflow.com/questions/47344571/how-to-draw-checkbox-or-tick-mark-in-github-markdown-table
