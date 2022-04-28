@@ -28,7 +28,7 @@ https://github.com/onnx/onnx/blob/fb1f72159f4030ce45503279e6f6b8a7fb103e0f/docs/
 |3|Acosh|:heavy_check_mark:|
 |4|Add|:heavy_check_mark:|
 |5|And|:heavy_check_mark:|
-|6|ArgMax||
+|6|ArgMax|:heavy_check_mark:|
 |7|ArgMin||
 |8|Asin||
 |9|Asinh||
