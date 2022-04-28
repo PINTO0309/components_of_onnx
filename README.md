@@ -15,4 +15,4 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 
 # Base
 ## As of April 28, 2022
-https://github.com/onnx/onnx/blob/fb1f72159f4030ce45503279e6f6b8a7fb103e0f/docs/Operators.md
+https://github.com/onnx/onnx/blob/fb1f72159f4030ce45503279e6f6b8a7fb103e0f/docs/Operators.md#aionnx-default
