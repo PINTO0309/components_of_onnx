@@ -21,7 +21,7 @@ https://github.com/onnx/onnx/blob/fb1f72159f4030ce45503279e6f6b8a7fb103e0f/docs/
 
 |**No.**|**Operator**|**Fin**|
 |:-|:-|:-:|
-|1|Abs||
+|1|Abs|:heavy_check_mark:|
 |2|Acos||
 |3|Acosh||
 |4|Add||
