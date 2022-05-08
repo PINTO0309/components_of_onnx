@@ -102,7 +102,7 @@ https://github.com/onnx/onnx/blob/fb1f72159f4030ce45503279e6f6b8a7fb103e0f/docs/
 |077|Mul|||
 |078|Multinomial|||
 |079|Neg|||
-|080|NonMaxSuppression||:heavy_check_mark:|
+|080|NonMaxSuppression|![20220508233013](https://user-images.githubusercontent.com/33194443/167301110-014feebb-2dae-4d09-98e7-85771d4fe2b7.png)|:heavy_check_mark:|
 |081|NonZero|||
 |082|Not|||
 |083|OneHot|||
