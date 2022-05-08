@@ -195,6 +195,7 @@ https://github.com/onnx/onnx/blob/fb1f72159f4030ce45503279e6f6b8a7fb103e0f/docs/
 |170|Softmax||
 |171|SoftmaxCrossEntropyLoss||
 |Z001|Normalization_rgb_imagenet|:heavy_check_mark:|
+|Z002|Normalization_bgr_imagenet|:heavy_check_mark:|
 
 </div></details>
 
