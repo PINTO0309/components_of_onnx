@@ -20,6 +20,7 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 # Opsets List
 
 - [onnx_opsets](https://docs.google.com/spreadsheets/d/1_iUaLC9AP8AtND715NLSTh-fDX4WHBkF_rZCj0vgDvY/edit?usp=sharing)
+- [opsets JSON sample](https://github.com/PINTO0309/components_of_onnx/blob/main/components_of_onnx/ops/onnx_opsets.json)
 
 # Progress
 
