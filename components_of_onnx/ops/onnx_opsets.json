@@ -1,0 +1,52 @@
+{
+  "opsets": [
+    {
+      "Abs": [
+        {
+          "opset": 13,
+          "inputs": 1,
+          "outputs": 1,
+          "attrs": []
+        },
+        {
+          "opset": 6,
+          "inputs": 1,
+          "outputs": 1,
+          "attrs": []
+        },
+        {
+          "opset": 1,
+          "inputs": 1,
+          "outputs": 1,
+          "attrs": [
+            {
+              "name": "consumed_inputs",
+              "value_type": "int64[]",
+              "default": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Acos": [
+        {
+          "opset": 7,
+          "inputs": 1,
+          "outputs": 1,
+          "attrs": []
+        }
+      ]
+    },
+    {
+      "Acosh": [
+        {
+          "opset": 9,
+          "inputs": 1,
+          "outputs": 1,
+          "attrs": []
+        }
+      ]
+    }
+  ]
+}
