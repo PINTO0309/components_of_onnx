@@ -58,7 +58,6 @@ def main():
             if attr[ATTR_NAME]:
                 attrs_dict.setdefault(attr[ATTR_NAME], "")
                 attrs_dict[attr[ATTR_NAME]] = [attr[ATTR_TYPE], attr[ATTR_DEFAULT]]
-                continue
 
         input_output_attrs = {
             "inputs": data[INPUTS],
