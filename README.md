@@ -21,7 +21,8 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 
 - [onnx_opsets](https://docs.google.com/spreadsheets/d/1_iUaLC9AP8AtND715NLSTh-fDX4WHBkF_rZCj0vgDvY/edit?usp=sharing)
 - [onnx_opsets.csv](https://github.com/PINTO0309/components_of_onnx/blob/main/components_of_onnx/ops/onnx_opsets.csv)
-- [opsets JSON sample.json](https://github.com/PINTO0309/components_of_onnx/blob/main/components_of_onnx/ops/onnx_opsets_sample.json)
+- [onnx_opsets.json](https://github.com/PINTO0309/components_of_onnx/blob/main/components_of_onnx/ops/onnx_opsets.json)
+- [opsets csv to json converter](https://github.com/PINTO0309/components_of_onnx/blob/main/components_of_onnx/ops/onnx_opsets_csv_to_json.py)
 
 # Progress
 
