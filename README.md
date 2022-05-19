@@ -39,7 +39,7 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 |007|ArgMin|![20220508224941](https://user-images.githubusercontent.com/33194443/167299320-22920bdf-2481-4b7e-b35c-80247d11cb8c.png)|:heavy_check_mark:|
 |008|Asin|![20220508225017](https://user-images.githubusercontent.com/33194443/167299344-fec02870-0d3a-48de-83c4-73cd7ed1b397.png)|:heavy_check_mark:|
 |009|Asinh|![20220508225055](https://user-images.githubusercontent.com/33194443/167299374-1dfaeab6-ddb8-4b8f-ae0e-71e9ec8103dc.png)|:heavy_check_mark:|
-|010|Atan|||
+|010|Atan|![image](https://user-images.githubusercontent.com/33194443/169282959-74993325-ceda-471f-b9a6-bcf162709c34.png)|:heavy_check_mark:|
 |011|Atanh|||
 |012|AveragePool|||
 |013|BatchNormalization|||
