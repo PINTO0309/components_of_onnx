@@ -4,6 +4,10 @@ https://github.com/onnx/onnx/blob/main/docs/Operators.md
 
 https://github.com/PINTO0309/simple-onnx-processing-tools
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/33194443/170163635-00a4d3c6-e65f-43f5-8b34-c2c02c87b804.png" />
+</p>
+
 # Key concept
 - [ ] Convert each and every operator in [Operators.md](https://github.com/onnx/onnx/blob/main/docs/Operators.md) into a single ONNX file and commit.
 - [ ] Use [sog4onnx](https://github.com/PINTO0309/sog4onnx) to generate the ONNX model for a single OP.
