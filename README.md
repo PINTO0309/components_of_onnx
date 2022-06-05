@@ -207,6 +207,7 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 |171|SoftmaxCrossEntropyLoss|||
 |Z001|Normalization_rgb_imagenet|![20220508222828](https://user-images.githubusercontent.com/33194443/167298468-9881994f-356d-4a2e-a1c0-ce7fb0d2de88.png)|:heavy_check_mark:|
 |Z002|Normalization_bgr_imagenet|![20220508222945](https://user-images.githubusercontent.com/33194443/167298522-9acd3f1e-4249-4944-a3e8-7276c98eacd0.png)|:heavy_check_mark:|
+|Z003|SingleClass_NonMaxSupression|480x640|:heavy_check_mark:|
 
 </div></details>
 
