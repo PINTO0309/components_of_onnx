@@ -1,0 +1,45 @@
+OPNAME=resize_custom_1
+sog4onnx \
+--op_type Resize \
+--opset 11 \
+--op_name ${OPNAME} \
+--input_variables input float32 [1,3,\'height\',\'width\'] \
+--input_variables roi float32 [0] \
+--input_variables scales float32 [4] \
+--output_variables output float32 [1,3,\'height\',\'width\'] \
+--attributes coordinate_transformation_mode string half_pixel \
+--attributes cubic_coeff_a float32 -0.75 \
+--attributes mode string linear \
+--attributes nearest_mode string floor
+
+
+onnx2json \
+--input_onnx_file_path Resize.onnx \
+--output_json_path Resize.json \
+--json_indent 2
+
+json2onnx \
+--input_json_path Resize.json \
+--output_onnx_file_path Resize.onnx
+
+
+sed4onnx \
+--constant_string '[0.5]' \
+--dtype float32 \
+--mode encode
+
+sed4onnx \
+--constant_string 'AACAPwAAgD8AAAA/AAAAPw==' \
+--dtype float32 \
+--mode decode
+
+
+
+
+
+
+
+
+
+
+
