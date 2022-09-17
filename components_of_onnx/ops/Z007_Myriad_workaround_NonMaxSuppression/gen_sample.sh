@@ -86,11 +86,32 @@ do
     --srcop_destop workaround_mul_const workaround_mul_b \
     --output_onnx_file_path ${OP}${OPSET}_workaround.onnx
 
+    ################################################### N batch NonMaxSuppression
+    sbi4onnx \
+    -if NonMaxSuppression${OPSET}_${BOXES}.onnx \
+    -of NonMaxSuppression${OPSET}_N_${BOXES}.onnx \
+    -ics batch
+
+    sio4onnx \
+    -if NonMaxSuppression${OPSET}_N_${BOXES}.onnx \
+    -of NonMaxSuppression${OPSET}_N_${BOXES}.onnx \
+    -i boxes_var \
+    -i scores_var \
+    -is "batch" ${BOXES} 4 \
+    -is "batch" ${CLASSES} ${BOXES} \
+    -o selected_indices \
+    -os "N" 3
+
     ################################################### NonMaxSuppression + Myriad workaround Mul
     snc4onnx \
     --input_onnx_file_paths NonMaxSuppression${OPSET}_${BOXES}.onnx ${OP}${OPSET}_workaround.onnx \
     --srcop_destop selected_indices workaround_mul_a \
     --output_onnx_file_path NonMaxSuppression${OPSET}_${BOXES}.onnx
+
+    snc4onnx \
+    --input_onnx_file_paths NonMaxSuppression${OPSET}_N_${BOXES}.onnx ${OP}${OPSET}_workaround.onnx \
+    --srcop_destop selected_indices workaround_mul_a \
+    --output_onnx_file_path NonMaxSuppression${OPSET}_N_${BOXES}.onnx
 
     ################################################### Cleaning
     rm Constant_iou_threshold.onnx
