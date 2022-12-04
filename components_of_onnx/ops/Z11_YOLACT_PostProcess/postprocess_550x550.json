@@ -1,0 +1,1577 @@
+{
+  "irVersion": "8",
+  "graph": {
+    "node": [
+      {
+        "input": [
+          "post_score",
+          "873"
+        ],
+        "output": [
+          "onnx::Transpose_1367"
+        ],
+        "name": "Reshape_512",
+        "opType": "Reshape"
+      },
+      {
+        "input": [
+          "post_proto"
+        ],
+        "output": [
+          "squeeze_proto_out"
+        ],
+        "name": "squeeze11_proto",
+        "opType": "Squeeze",
+        "attribute": [
+          {
+            "name": "axes",
+            "ints": [
+              "0"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "post_loc",
+          "fnms_const_starts__6",
+          "fnms_const_ends__7",
+          "fnms_const_axes__23"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_6/strided_slice2:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_6/strided_slice2",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "post_loc",
+          "fnms_const_starts__11",
+          "fnms_const_ends__12",
+          "fnms_const_axes__23"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_4/strided_slice1:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_4/strided_slice1",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "post_loc",
+          "fnms_const_starts__16",
+          "fnms_const_ends__17",
+          "fnms_const_axes__23"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_2/strided_slice1:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_2/strided_slice1",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "post_loc",
+          "fnms_const_starts__21",
+          "fnms_const_ends__22",
+          "fnms_const_axes__23"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem/strided_slice:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem/strided_slice",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "onnx::Transpose_1367"
+        ],
+        "output": [
+          "onnx::Slice_1368"
+        ],
+        "name": "Transpose_513",
+        "opType": "Transpose",
+        "attribute": [
+          {
+            "name": "perm",
+            "ints": [
+              "0",
+              "2",
+              "1"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem_6/strided_slice2:0"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_6/strided_slice2__9:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_6/strided_slice2__9",
+        "opType": "Squeeze",
+        "attribute": [
+          {
+            "name": "axes",
+            "ints": [
+              "2"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem_4/strided_slice1:0"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_4/strided_slice1__14:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_4/strided_slice1__14",
+        "opType": "Squeeze",
+        "attribute": [
+          {
+            "name": "axes",
+            "ints": [
+              "2"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem_2/strided_slice1:0"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_2/strided_slice1__19:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_2/strided_slice1__19",
+        "opType": "Squeeze",
+        "attribute": [
+          {
+            "name": "axes",
+            "ints": [
+              "2"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem/strided_slice:0"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem/strided_slice__24:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem/strided_slice__24",
+        "opType": "Squeeze",
+        "attribute": [
+          {
+            "name": "axes",
+            "ints": [
+              "2"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "onnx::Slice_1368",
+          "onnx::Slice_1372",
+          "onnx::Slice_1382",
+          "onnx::Slice_1372",
+          "onnx::Slice_1372"
+        ],
+        "output": [
+          "scores"
+        ],
+        "name": "Slice_573",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem_6/strided_slice2__9:0",
+          "fnms_const_fold_opt__28_mod_4"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_7/strided_slice3:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_7/strided_slice3",
+        "opType": "Reshape"
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem_4/strided_slice1__14:0",
+          "fnms_const_fold_opt__28_mod_4"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_5/strided_slice:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_5/strided_slice",
+        "opType": "Reshape"
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem_2/strided_slice1__19:0",
+          "fnms_const_fold_opt__28_mod_4"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_3/strided_slice:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_3/strided_slice",
+        "opType": "Reshape"
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem/strided_slice__24:0",
+          "fnms_const_fold_opt__28_mod_4"
+        ],
+        "output": [
+          "fnms_model/tf.__operators__.getitem_1/strided_slice:0"
+        ],
+        "name": "fnms_model/tf.__operators__.getitem_1/strided_slice",
+        "opType": "Reshape"
+      },
+      {
+        "input": [
+          "fnms_model/tf.__operators__.getitem_3/strided_slice:0",
+          "fnms_model/tf.__operators__.getitem_1/strided_slice:0",
+          "fnms_model/tf.__operators__.getitem_7/strided_slice3:0",
+          "fnms_model/tf.__operators__.getitem_5/strided_slice:0"
+        ],
+        "output": [
+          "fnms_boxes_xyxy_var"
+        ],
+        "name": "fnms_Identity",
+        "opType": "Concat",
+        "attribute": [
+          {
+            "name": "axis",
+            "i": "2",
+            "type": "INT"
+          }
+        ]
+      },
+      {
+        "input": [
+          "fnms_boxes_xyxy_var",
+          "scores",
+          "fnms_max_output_boxes_per_class",
+          "fnms_iou_threshold",
+          "fnms_score_threshold"
+        ],
+        "output": [
+          "fnms_selected_indices"
+        ],
+        "name": "fnms_nonmaxsuppression11",
+        "opType": "NonMaxSuppression",
+        "attribute": [
+          {
+            "name": "center_point_box",
+            "i": "0",
+            "type": "INT"
+          }
+        ]
+      },
+      {
+        "input": [
+          "fnms_selected_indices",
+          "onnx::Slice_1372"
+        ],
+        "output": [
+          "fnms_workaround_mul_out"
+        ],
+        "name": "fnms_mul11",
+        "opType": "Mul"
+      },
+      {
+        "input": [
+          "scores",
+          "fnms_selected_indices"
+        ],
+        "output": [
+          "model/tf.compat.v1.gather_nd/GatherNd"
+        ],
+        "name": "model/tf.compat.v1.gather_nd/GatherNd",
+        "opType": "GatherND"
+      },
+      {
+        "input": [
+          "fnms_workaround_mul_out",
+          "snms_const_starts__7",
+          "snms_const_ends__8",
+          "snms_const_starts__7"
+        ],
+        "output": [
+          "snms_model/tf.__operators__.getitem/strided_slice"
+        ],
+        "name": "snms_model/tf.__operators__.getitem/strided_slice",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "model/tf.compat.v1.gather_nd/GatherNd",
+          "const_fold_opt__11"
+        ],
+        "output": [
+          "model/tf.__operators__.getitem/strided_slice1"
+        ],
+        "name": "model/tf.__operators__.getitem/strided_slice1",
+        "opType": "Reshape"
+      },
+      {
+        "input": [
+          "fnms_workaround_mul_out",
+          "snms_const_starts__13",
+          "snms_const_ends__14",
+          "snms_const_starts__7"
+        ],
+        "output": [
+          "snms_Identity_1_raw_output___5:0"
+        ],
+        "name": "snms_Identity_1",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "snms_model/tf.__operators__.getitem/strided_slice"
+        ],
+        "output": [
+          "snms_model/tf.__operators__.getitem/strided_slice__10:0"
+        ],
+        "name": "snms_model/tf.__operators__.getitem/strided_slice__10",
+        "opType": "Squeeze",
+        "attribute": [
+          {
+            "name": "axes",
+            "ints": [
+              "1"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "model/tf.__operators__.getitem/strided_slice1",
+          "fnms_const_starts__21",
+          "const_ends__9",
+          "fnms_const_axes__23"
+        ],
+        "output": [
+          "final_scores"
+        ],
+        "name": "Identity",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "snms_Identity_1_raw_output___5:0"
+        ],
+        "output": [
+          "sub_out"
+        ],
+        "name": "snms_Identity_1__16",
+        "opType": "Squeeze",
+        "attribute": [
+          {
+            "name": "axes",
+            "ints": [
+              "1"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "post_loc",
+          "sub_out"
+        ],
+        "output": [
+          "snms_gat_boxes_out"
+        ],
+        "name": "snms_gather11_boxes",
+        "opType": "Gather",
+        "attribute": [
+          {
+            "name": "axis",
+            "i": "1",
+            "type": "INT"
+          }
+        ]
+      },
+      {
+        "input": [
+          "post_masks",
+          "sub_out"
+        ],
+        "output": [
+          "snms_gat_masks_out"
+        ],
+        "name": "snms_gather11_masks",
+        "opType": "Gather",
+        "attribute": [
+          {
+            "name": "axis",
+            "i": "1",
+            "type": "INT"
+          }
+        ]
+      },
+      {
+        "input": [
+          "snms_model/tf.__operators__.getitem/strided_slice__10:0"
+        ],
+        "output": [
+          "snms_model/tf.cast/Cast"
+        ],
+        "name": "snms_model/tf.cast/Cast",
+        "opType": "Cast",
+        "attribute": [
+          {
+            "name": "to",
+            "i": "1",
+            "type": "INT"
+          }
+        ]
+      },
+      {
+        "input": [
+          "snms_gat_masks_out"
+        ],
+        "output": [
+          "squeeze_snms_squeeze_masks_out"
+        ],
+        "name": "squeeze11_snms_squeeze_masks_out",
+        "opType": "Squeeze",
+        "attribute": [
+          {
+            "name": "axes",
+            "ints": [
+              "0"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "snms_model/tf.cast/Cast",
+          "const_fold_opt__11"
+        ],
+        "output": [
+          "snms_model/tf.__operators__.getitem_1/strided_slice1"
+        ],
+        "name": "snms_model/tf.__operators__.getitem_1/strided_slice1",
+        "opType": "Reshape"
+      },
+      {
+        "input": [
+          "squeeze_snms_squeeze_masks_out"
+        ],
+        "output": [
+          "mask_trans_output"
+        ],
+        "name": "mask_transpose",
+        "opType": "Transpose",
+        "attribute": [
+          {
+            "name": "perm",
+            "ints": [
+              "1",
+              "0"
+            ],
+            "type": "INTS"
+          }
+        ]
+      },
+      {
+        "input": [
+          "snms_model/tf.__operators__.getitem_1/strided_slice1",
+          "fnms_const_starts__21",
+          "const_ends__9",
+          "fnms_const_axes__23"
+        ],
+        "output": [
+          "snms_classes_sliced"
+        ],
+        "name": "snms_Identity",
+        "opType": "Slice"
+      },
+      {
+        "input": [
+          "squeeze_proto_out",
+          "mask_trans_output"
+        ],
+        "output": [
+          "mask_matmul_output"
+        ],
+        "name": "mask_matmul",
+        "opType": "MatMul"
+      },
+      {
+        "input": [
+          "snms_gat_boxes_out",
+          "final_scores",
+          "snms_classes_sliced"
+        ],
+        "output": [
+          "x1y1x2y2_score_class"
+        ],
+        "name": "concat11_final_concat",
+        "opType": "Concat",
+        "attribute": [
+          {
+            "name": "axis",
+            "i": "2",
+            "type": "INT"
+          }
+        ]
+      },
+      {
+        "input": [
+          "mask_matmul_output"
+        ],
+        "output": [
+          "mask_sig_output"
+        ],
+        "name": "mask_sigmoid",
+        "opType": "Sigmoid"
+      },
+      {
+        "input": [
+          "mask_sig_output"
+        ],
+        "output": [
+          "final_masks"
+        ],
+        "name": "mask_final_transpose",
+        "opType": "Transpose",
+        "attribute": [
+          {
+            "name": "perm",
+            "ints": [
+              "2",
+              "0",
+              "1"
+            ],
+            "type": "INTS"
+          }
+        ]
+      }
+    ],
+    "name": "torch_jit",
+    "initializer": [
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "int64Data": [
+          "-1",
+          "19248",
+          "81"
+        ],
+        "name": "873"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_starts__6",
+        "rawData": "AAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_ends__7",
+        "rawData": "////fwAAAAD///9/AAAAAAQAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_axes__23",
+        "rawData": "AAAAAAAAAAABAAAAAAAAAAIAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_starts__11",
+        "rawData": "AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_ends__12",
+        "rawData": "////fwAAAAD///9/AAAAAAMAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_starts__16",
+        "rawData": "AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_ends__17",
+        "rawData": "////fwAAAAD///9/AAAAAAIAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_starts__21",
+        "rawData": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_ends__22",
+        "rawData": "////fwAAAAD///9/AAAAAAEAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "1"
+        ],
+        "dataType": 7,
+        "name": "onnx::Slice_1372",
+        "rawData": "AQAAAAAAAAA="
+      },
+      {
+        "dims": [
+          "1"
+        ],
+        "dataType": 7,
+        "name": "onnx::Slice_1382",
+        "rawData": "/////////38="
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "fnms_const_fold_opt__28_mod_4",
+        "rawData": "AQAAAAAAAAAwSwAAAAAAAAEAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "1"
+        ],
+        "dataType": 7,
+        "name": "fnms_max_output_boxes_per_class",
+        "rawData": "CgAAAAAAAAA="
+      },
+      {
+        "dims": [
+          "1"
+        ],
+        "dataType": 1,
+        "name": "fnms_iou_threshold",
+        "rawData": "AAAAPw=="
+      },
+      {
+        "dims": [
+          "1"
+        ],
+        "dataType": 1,
+        "name": "fnms_score_threshold",
+        "rawData": "MzMzPw=="
+      },
+      {
+        "dims": [
+          "2"
+        ],
+        "dataType": 7,
+        "name": "snms_const_starts__7",
+        "rawData": "AAAAAAAAAAABAAAAAAAAAA=="
+      },
+      {
+        "dims": [
+          "2"
+        ],
+        "dataType": 7,
+        "name": "snms_const_ends__8",
+        "rawData": "////fwAAAAACAAAAAAAAAA=="
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "const_fold_opt__11",
+        "rawData": "AQAAAAAAAAD//////////wEAAAAAAAAA"
+      },
+      {
+        "dims": [
+          "2"
+        ],
+        "dataType": 7,
+        "name": "snms_const_starts__13",
+        "rawData": "AAAAAAAAAAACAAAAAAAAAA=="
+      },
+      {
+        "dims": [
+          "2"
+        ],
+        "dataType": 7,
+        "name": "snms_const_ends__14",
+        "rawData": "////fwAAAAADAAAAAAAAAA=="
+      },
+      {
+        "dims": [
+          "3"
+        ],
+        "dataType": 7,
+        "name": "const_ends__9",
+        "rawData": "////fwAAAAD///9/AAAAAP///38AAAAA"
+      }
+    ],
+    "input": [
+      {
+        "name": "post_loc",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "4"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "post_score",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "81"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "post_proto",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimValue": "32"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "post_masks",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "32"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "output": [
+      {
+        "name": "x1y1x2y2_score_class",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimParam": "N"
+                },
+                {
+                  "dimValue": "6"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "final_masks",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "N"
+                },
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimValue": "138"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "valueInfo": [
+      {
+        "name": "onnx::Transpose_1367",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "81"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "squeeze_proto_out",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimValue": "32"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_6/strided_slice2:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_4/strided_slice1:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_2/strided_slice1:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem/strided_slice:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "onnx::Slice_1368",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "81"
+                },
+                {
+                  "dimValue": "19248"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_6/strided_slice2__9:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_4/strided_slice1__14:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_2/strided_slice1__19:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem/strided_slice__24:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "scores",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "80"
+                },
+                {
+                  "dimValue": "19248"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_7/strided_slice3:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_5/strided_slice:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_3/strided_slice:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_model/tf.__operators__.getitem_1/strided_slice:0",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_boxes_xyxy_var",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimValue": "19248"
+                },
+                {
+                  "dimValue": "4"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_selected_indices",
+        "type": {
+          "tensorType": {
+            "elemType": 7,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "N"
+                },
+                {
+                  "dimValue": "3"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "fnms_workaround_mul_out",
+        "type": {
+          "tensorType": {
+            "elemType": 7,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "N"
+                },
+                {
+                  "dimValue": "3"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "model/tf.compat.v1.gather_nd/GatherNd",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "unk__12"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "snms_model/tf.__operators__.getitem/strided_slice",
+        "type": {
+          "tensorType": {
+            "elemType": 7,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "unk__0"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "model/tf.__operators__.getitem/strided_slice1",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimParam": "unk__0"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "snms_Identity_1_raw_output___5:0",
+        "type": {
+          "tensorType": {
+            "elemType": 7,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "unk__2"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "snms_model/tf.__operators__.getitem/strided_slice__10:0",
+        "type": {
+          "tensorType": {
+            "elemType": 7,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "unk__0"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "final_scores",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimParam": "unk__13"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "sub_out",
+        "type": {
+          "tensorType": {
+            "elemType": 7,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "unk__24"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "snms_gat_boxes_out",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimParam": "N"
+                },
+                {
+                  "dimValue": "4"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "snms_gat_masks_out",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimParam": "N"
+                },
+                {
+                  "dimValue": "32"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "snms_model/tf.cast/Cast",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "unk__0"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "squeeze_snms_squeeze_masks_out",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimParam": "N"
+                },
+                {
+                  "dimValue": "32"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "snms_model/tf.__operators__.getitem_1/strided_slice1",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimParam": "unk__1"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "mask_trans_output",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "32"
+                },
+                {
+                  "dimParam": "N"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "snms_classes_sliced",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "1"
+                },
+                {
+                  "dimParam": "unk__23"
+                },
+                {
+                  "dimValue": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "mask_matmul_output",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimParam": "N"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "mask_sig_output",
+        "type": {
+          "tensorType": {
+            "elemType": 1,
+            "shape": {
+              "dim": [
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimValue": "138"
+                },
+                {
+                  "dimParam": "N"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "opsetImport": [
+    {
+      "domain": "",
+      "version": "11"
+    }
+  ]
+}
