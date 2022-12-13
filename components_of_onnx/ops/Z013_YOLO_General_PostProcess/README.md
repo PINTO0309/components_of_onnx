@@ -1,5 +1,5 @@
 # Note
-- Post-Process (Myriad Support) - https://github.com/PINTO0309/PINTO_model_zoo/blob/main/337_FreeYOLO/PINTO_special/convert_script.txt
+- Post-Process (Myriad Support) - https://github.com/PINTO0309/components_of_onnx/blob/main/components_of_onnx/ops/Z013_YOLO_General_PostProcess/convert_script.txt
 ![image](https://user-images.githubusercontent.com/33194443/207271656-0b7fc7ca-aadb-4d3c-b18c-388bd60c687d.png)
 
 # How to change NMS parameter
@@ -15,8 +15,8 @@
   or
   ```
   sam4onnx \
-  --input_onnx_file_path yolo_free_nano_640x640_post.onnx \
-  --output_onnx_file_path yolo_free_nano_640x640_post.onnx \
+  --input_onnx_file_path postprocess_8400.onnx \
+  --output_onnx_file_path postprocess_8400.onnx \
   --op_name post_nms_NonMaxSuppression \
   --input_constants max_output_boxes_per_class int64 [5]
   ```
@@ -32,8 +32,8 @@
   or
   ```bash
   sam4onnx \
-  --input_onnx_file_path yolo_free_nano_640x640_post.onnx \
-  --output_onnx_file_path yolo_free_nano_640x640_post.onnx \
+  --input_onnx_file_path postprocess_8400.onnx \
+  --output_onnx_file_path postprocess_8400.onnx \
   --op_name post_nms_NonMaxSuppression \
   --input_constants iou_threshold float32 [0.5]
   ```
@@ -49,8 +49,8 @@
   or
   ```bash
   sam4onnx \
-  --input_onnx_file_path yolo_free_nano_640x640_post.onnx \
-  --output_onnx_file_path yolo_free_nano_640x640_post.onnx \
+  --input_onnx_file_path postprocess_8400.onnx \
+  --output_onnx_file_path postprocess_8400.onnx \
   --op_name post_nms_NonMaxSuppression \
   --input_constants score_threshold float32 [0.75]
   ```
