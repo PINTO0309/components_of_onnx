@@ -218,7 +218,7 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 |Z011|YOLACT_PostProcess|![image](https://user-images.githubusercontent.com/33194443/205486006-edfd7cdf-9fab-47ad-9e60-5fc579c240e4.png)|:heavy_check_mark:|
 |Z012|DAMO-YOLO_PostProcess|![image](https://user-images.githubusercontent.com/33194443/206088632-56049aa7-777e-47eb-a01a-2570afb831b5.png)|:heavy_check_mark:|
 |Z013|YOLO_General_PostProcess (anchor+NMS)|![image](https://user-images.githubusercontent.com/33194443/207273281-a076cec5-9ee3-4dc7-8aa6-5d540fad61b1.png)|:heavy_check_mark:|
-|Z014|Inverse (com.microsoft)||:heavy_check_mark:|
+|Z014|Inverse (com.microsoft)|![image](https://user-images.githubusercontent.com/33194443/210161293-81d8f5bf-009a-4893-95b3-b092b3857a77.png)|:heavy_check_mark:|
 
 </div></details>
 
