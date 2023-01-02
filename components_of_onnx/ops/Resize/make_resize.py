@@ -16,14 +16,14 @@ x = torch.randn(shape)
 OPSETS = [13,11,10]
 
 for opset in OPSETS:
-    onnx_file = f'resize_{opset}.onnx'
+    onnx_file = f'Resize_{opset}.onnx'
     torch.onnx.export(
         model,
         args=(x),
         f=onnx_file,
         opset_version=opset,
-        input_names=['input'],
-        output_names=['output'],
+        input_names=[f'resize{opset}_input'],
+        output_names=[f'resize{opset}_output'],
     )
     import onnx
     from onnxsim import simplify
