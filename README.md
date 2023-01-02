@@ -145,7 +145,7 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 |109|ReduceSumSquare|||
 |110|Relu|||
 |111|Reshape|||
-|112|Resize|||
+|112|Resize|![image](https://user-images.githubusercontent.com/33194443/210193246-fcd8886a-77bf-41d1-a794-4259387ca78f.png)|:heavy_check_mark:|
 |113|ReverseSequence|||
 |114|RoiAlign|||
 |115|Round|||
