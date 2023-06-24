@@ -220,8 +220,8 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 |Z013|YOLO_General_PostProcess (anchor+NMS)|![image](https://user-images.githubusercontent.com/33194443/207273281-a076cec5-9ee3-4dc7-8aa6-5d540fad61b1.png)|:heavy_check_mark:|
 |Z014|Inverse (com.microsoft)|![image](https://user-images.githubusercontent.com/33194443/210161293-81d8f5bf-009a-4893-95b3-b092b3857a77.png)|:heavy_check_mark:|
 |Z015|MSELoss|![image](https://user-images.githubusercontent.com/33194443/215070824-57acb638-51db-46e8-b2b8-39ec4e0dbc4d.png)|:heavy_check_mark:|
-|Z016|EfficientNMS_TRT||:heavy_check_mark:|
-|Z017|BatchedNMS_TRT||:heavy_check_mark:|
+|Z016|EfficientNMS_TRT|![image](https://github.com/PINTO0309/components_of_onnx/assets/33194443/6610eed9-ffd2-4eb3-b8bd-e803306cbd53)|:heavy_check_mark:|
+|Z017|BatchedNMS_TRT|![image](https://github.com/PINTO0309/components_of_onnx/assets/33194443/694c7cef-98b7-4f7b-a2c6-9d817cd11351)|:heavy_check_mark:|
 
 </div></details>
 
