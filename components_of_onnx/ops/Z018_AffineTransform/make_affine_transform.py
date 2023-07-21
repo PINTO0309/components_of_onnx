@@ -8,13 +8,13 @@ class AffineTransform_Layer(nn.Module):
         super(AffineTransform_Layer, self).__init__()
 
     def forward(self, src, dst):
-        A = torch.cat([src, torch.ones((3, 1))], axis=1)
+        A = torch.cat([src, torch.ones((1, 3, 1))], axis=2)
         B = dst
         # x = torch.linalg.solve(A, B)
         print(f'A', A.shape)
         print(f'B', B.shape)
         x = torch.linalg.inv(A) @ B
-        x = torch.transpose(x, 1, 0)
+        x = torch.transpose(x, 2, 1)
         return x
 
 
@@ -23,7 +23,7 @@ class AffineTransform_Before_Inv_Layer(nn.Module):
         super(AffineTransform_Before_Inv_Layer, self).__init__()
 
     def forward(self, src, dst):
-        A = torch.cat([src, torch.ones((3, 1))], axis=1)
+        A = torch.cat([src, torch.ones((1, 3, 1))], axis=2)
         B = dst
         return A, B
 
@@ -34,14 +34,14 @@ class AffineTransform_After_Inv_Layer(nn.Module):
 
     def forward(self, inv_A, B):
         x = inv_A @ B
-        x = torch.transpose(x, 1, 0)
+        x = torch.transpose(x, 2, 1)
         # x = torch.round(input=x, decimals=7, out=None)
         # x = x.round(decimals=7)
         return x
 
 
 
-OPSET = 11
+OPSET = 16
 model = AffineTransform_Layer()
 before_model = AffineTransform_Before_Inv_Layer()
 after_model = AffineTransform_After_Inv_Layer()
@@ -49,20 +49,21 @@ after_model = AffineTransform_After_Inv_Layer()
 src = torch.tensor(
     np.asarray(
         [
+        [
             [109.    , 173.    ],
             [109.    ,  10.8125],
             [-53.1875,  10.8125]
-        ],
+        ]],
         dtype=np.float32
     )
 )
 dst = torch.tensor(
     np.asarray(
-        [
+        [[
             [ 96., 128.],
             [ 96.,  32.],
             [  0.,  32.]
-        ],
+        ]],
         dtype=np.float32
     )
 )
@@ -76,7 +77,7 @@ print('warp_mat', warp_mat.shape)
 print(warp_mat)
 print('warp_mat_custom', warp_mat_custom.numpy().shape)
 print(warp_mat_custom.numpy())
-print(f'warp_mat == warp_mat_custom: {np.allclose(warp_mat, warp_mat_custom.numpy())}')
+# print(f'warp_mat == warp_mat_custom: {np.allclose(warp_mat, warp_mat_custom.numpy())}')
 a=0
 
 """
