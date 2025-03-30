@@ -225,7 +225,7 @@ https://github.com/PINTO0309/simple-onnx-processing-tools
 |Z018|AffineTransform|![image](https://github.com/PINTO0309/components_of_onnx/assets/33194443/a376a565-137f-4957-99e5-4148f32995b9)|:heavy_check_mark:|
 |Z019|AffineGrid_4D (general purpose)||:heavy_check_mark:|
 |Z020|WarpAffine_4D||:heavy_check_mark:|
-|Z021|DepthBBoxProcessor||:heavy_check_mark:|
+|Z021|DepthBBoxProcessor|![image](https://github.com/user-attachments/assets/9df3b9bb-59e1-4598-9a31-6a86afb8b0ec)|:heavy_check_mark:|
 
 </div></details>
 
